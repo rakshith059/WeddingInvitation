@@ -13,7 +13,6 @@ import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.franklymedia.fragments.BaseFragment
 import com.rakshith.weddinginvitation.R
 import com.rakshith.weddinginvitation.utils.widget.ExitWithAnimation
 import com.rakshith.weddinginvitation.utils.widget.startCircularReveal

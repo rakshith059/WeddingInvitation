@@ -6,7 +6,6 @@ import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.franklymedia.fragments.BaseFragment
 import com.rakshith.weddinginvitation.R
 import com.rakshith.weddinginvitation.adapters.ImageSlideShowAdapter
 import com.rakshith.weddinginvitation.utils.AnimStyleEnum

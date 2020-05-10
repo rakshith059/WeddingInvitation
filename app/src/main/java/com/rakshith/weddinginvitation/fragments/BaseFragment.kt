@@ -1,4 +1,4 @@
-package com.example.franklymedia.fragments
+package com.rakshith.weddinginvitation.fragments
 
 import android.content.Context
 import android.os.Bundle
