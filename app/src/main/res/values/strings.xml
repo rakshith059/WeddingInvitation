@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WeddingInvitation</string>
+    <string name="rakshana">#RaksHana</string>
+    <string name="title_dynamicfeature">Module Title</string>
+    <string name="marriage_date">\n\nMAY 17–18, 2020</string>
+    <string name="english_quote">This day for us is special\n A time beyond compare\n The joy we feel deep in our hearts\n We hope you will come and share\n Your presence there with us\n Means more than words can say\n Please try to be there\n To celebrate this special day\n\n #MegHith</string>
+    <string name="name"><![CDATA[Rakshith Shankar T R\n &\n Meghana N U]]></string>
+    <string name="parent_name">Mrs.Nagamani H S and Mr.Ravi kumar G S\n&amp;\nMrs.Uma D and late Mr.Nagaraj H P\nrequest the honor of your presence\n at the marriage of</string>
+    <string name="when">Monday\n18th May, 2020\nMuhurtham: 9:15 - 10:00 AM</string>
+    <string name="venue_green_zone">"Venue:\nAre you in GREEN zone?\nLions Club (Community Hall)\nNew town, Bhadravathi\nKarnataka 577301"</string>
+    <string name="venue_red_zone">"Are you in RED/ORANGE zone?\nYoutube Live"</string>
+</resources>

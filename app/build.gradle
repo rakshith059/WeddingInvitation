@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+// Manifest version information!. Please don't add double digit numbers.
+def versionMajor = 0
+def versionMinor = 1
+def versionPatch = 0
+def versionBuild = 0 // bump for dogfood builds, public betas, etc.
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.rakshith.weddinginvitation"
+        def appVersionName = "$versionMajor.$versionMinor.$versionPatch.$versionBuild"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        versionCode versionMajor * 100000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+        versionName appVersionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+
+    dynamicFeatures = [":dynamicfeature"]
+    signingConfigs {
+        allDebug {
+            storeFile file("$project.rootDir/keystore.jks")
+            storePassword 'meghith'
+            keyAlias "release"
+            keyPassword "meghith2020"
+        }
+        debug {
+            storeFile file('/Users/rakshithshankar/Documents/WeddingInvitation/keystore.jks')
+            storePassword 'meghith'
+            keyAlias = 'debug'
+            keyPassword 'meghith2020'
+        }
+        release {
+            storeFile file('/Users/rakshithshankar/Documents/WeddingInvitation/keystore.jks')
+            storePassword 'meghith'
+            keyAlias = 'release'
+            keyPassword 'meghith2020'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+dependencies {
+    api 'com.google.android.material:material:1.1.0'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //for loading images SimpleDraweeView
+    implementation "com.facebook.fresco:fresco:1.11.0"
+
+    implementation "androidx.appcompat:appcompat:1.1.0"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/fragment_home_vp_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.rakshith.weddinginvitation.utils.widget.TypeWriter
+        android:id="@+id/fragment_home_textWriter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_16dp"
+        android:background="@drawable/background_border"
+        android:fontFamily="sans-serif-condensed"
+        android:padding="@dimen/size_16dp"
+        android:rotation="-90"
+        android:text="@string/marriage_date"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_48sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_home_vp_image"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/size_16dp"
+        android:backgroundTint="@color/grey"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/white"
+        app:fabCustomSize="@dimen/size_80dp"
+        app:fabSize="auto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="@dimen/size_50dp"
+        app:srcCompat="@drawable/icon_wedding_invitation" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_kannada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/size_16dp"
+        android:backgroundTint="@color/grey"
+        app:fabCustomSize="@dimen/size_60dp"
+        app:fabSize="auto"
+        app:layout_constraintBottom_toTopOf="@+id/fab_english"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="@dimen/size_60dp"
+        app:srcCompat="@drawable/icon_kannada" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_english"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/size_16dp"
+        android:backgroundTint="@color/grey"
+        app:fabCustomSize="@dimen/size_60dp"
+        app:fabSize="auto"
+        app:layout_constraintBottom_toTopOf="@+id/fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="@dimen/size_60dp"
+        app:srcCompat="@drawable/icon_english" />
+
+    <!--    <com.rakshith.weddinginvitation.utils.widget.HeartBeatView-->
+    <!--        android:id="@+id/fragment_home_heartbeat"-->
+    <!--        android:layout_width="@dimen/size_100dp"-->
+    <!--        android:layout_height="@dimen/size_100dp"-->
+    <!--        android:layout_margin="@dimen/size_16dp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

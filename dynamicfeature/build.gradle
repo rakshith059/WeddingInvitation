@@ -1,0 +1,35 @@
+apply plugin: 'com.android.dynamic-feature'
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('/Users/rakshithshankar/Documents/WeddingInvitation/keystore.jks')
+            storePassword 'meghith'
+            keyAlias = 'debug'
+            keyPassword 'meghith2020'
+        }
+        release {
+            storeFile file('/Users/rakshithshankar/Documents/WeddingInvitation/keystore.jks')
+            storePassword 'meghith'
+            keyAlias = 'release'
+            keyPassword 'meghith2020'
+        }
+    }
+    compileSdkVersion 29
+    
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':app')
+}

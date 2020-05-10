@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rakshana4"
+    android:fillViewport="true"
+    android:gravity="center|top"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:paddingBottom="@dimen/size_16dp">
+
+        <com.rakshith.weddinginvitation.utils.widget.TypeWriter
+            android:id="@+id/fragment_invitation_textWriter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_16dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:lines="10"
+            android:padding="@dimen/size_16dp"
+            android:text="@string/english_quote"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/size_16sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fragment_invitation_tv_rakshith_parent_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_16dp"
+            android:layout_marginRight="@dimen/size_16dp"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="@string/parent_name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/size_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_invitation_textWriter" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fragment_invitation_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_16dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="@string/name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/size_28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_invitation_tv_rakshith_parent_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fragment_invitation_tv_when"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_16dp"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/size_4dp"
+            android:text="@string/when"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/size_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_invitation_tv_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fragment_invitation_tv_venue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_16dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/size_4dp"
+            android:text="@string/venue_green_zone"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/size_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_invitation_tv_when" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fragment_invitation_tv_venue_red_zone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_16dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/size_4dp"
+            android:text="@string/venue_red_zone"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/size_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_invitation_tv_venue" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
