@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="size_0dp">0dp</dimen>
-    <dimen name="size_4dp">4dp</dimen>
-    <dimen name="size_8dp">8dp</dimen>
-    <dimen name="size_16dp">16dp</dimen>
+    <dimen name="size_4dp">@dimen/_4sdp</dimen>
+    <dimen name="size_8dp">@dimen/_8sdp</dimen>
+    <dimen name="size_16dp">@dimen/_16sdp</dimen>
 
 
-    <dimen name="size_16sp">16sp</dimen>
-    <dimen name="size_18sp">18sp</dimen>
-    <dimen name="size_22sp">22sp</dimen>
-    <dimen name="size_24sp">24sp</dimen>
-    <dimen name="size_24dp">24dp</dimen>
-    <dimen name="size_200dp">200dp</dimen>
-    <dimen name="size_400dp">400dp</dimen>
-    <dimen name="size_300dp">300dp</dimen>
-    <dimen name="size_8sp">8sp</dimen>
-    <dimen name="size_32sp">32sp</dimen>
-    <dimen name="size_48sp">48sp</dimen>
-    <dimen name="size_2dp">2dp</dimen>
-    <dimen name="size_1dp">1dp</dimen>
-    <dimen name="size_100dp">100dp</dimen>
-    <dimen name="size_80dp">80dp</dimen>
-    <dimen name="size_50dp">50dp</dimen>
-    <dimen name="size_28sp">28sp</dimen>
-    <dimen name="size_60dp">60dp</dimen>
-    <dimen name="size_70dp">70dp</dimen>
+    <dimen name="size_16sp">@dimen/_16ssp</dimen>
+    <dimen name="size_18sp">@dimen/_18ssp</dimen>
+    <dimen name="size_22sp">@dimen/_22ssp</dimen>
+    <dimen name="size_24sp">@dimen/_24ssp</dimen>
+    <dimen name="size_24dp">@dimen/_24sdp</dimen>
+    <dimen name="size_200dp">@dimen/_200sdp</dimen>
+    <dimen name="size_400dp">@dimen/_400sdp</dimen>
+    <dimen name="size_300dp">@dimen/_300sdp</dimen>
+    <dimen name="size_8sp">@dimen/_8ssp</dimen>
+    <dimen name="size_32sp">@dimen/_32ssp</dimen>
+    <dimen name="size_48sp">@dimen/_48ssp</dimen>
+    <dimen name="size_2dp">@dimen/_2sdp</dimen>
+    <dimen name="size_1dp">@dimen/_1sdp</dimen>
+    <dimen name="size_100dp">@dimen/_100sdp</dimen>
+    <dimen name="size_80dp">@dimen/_80sdp</dimen>
+    <dimen name="size_50dp">@dimen/_50sdp</dimen>
+    <dimen name="size_28sp">@dimen/_28ssp</dimen>
+    <dimen name="size_60dp">@dimen/_60sdp</dimen>
+    <dimen name="size_70dp">@dimen/_70sdp</dimen>
+    <dimen name="size_90dp">@dimen/_90sdp</dimen>
 </resources>

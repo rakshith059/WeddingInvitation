@@ -61,6 +61,7 @@ class HomeFragment : BaseFragment(), View.OnClickListener {
 
     override fun onResume() {
         super.onResume()
+        isFabClosed = true
         mediaPlayer = MediaPlayer.create(context, R.raw.home_background_audio)
         mediaPlayer?.start()
         mediaPlayer?.isLooping = true
@@ -73,9 +74,12 @@ class HomeFragment : BaseFragment(), View.OnClickListener {
 
     private fun rakshanaImageList(): ArrayList<Int> {
         val rakshanaImageList = ArrayList<Int>()
-        rakshanaImageList.add(R.drawable.rakshana1)
+        rakshanaImageList.add(R.drawable.rakshana6)
+        rakshanaImageList.add(R.drawable.rakshana8)
+        rakshanaImageList.add(R.drawable.rakshana5)
+        rakshanaImageList.add(R.drawable.rakshana4)
+        rakshanaImageList.add(R.drawable.rakshana7)
         rakshanaImageList.add(R.drawable.rakshana2)
-        rakshanaImageList.add(R.drawable.rakshana3)
         return rakshanaImageList
     }
 
@@ -100,7 +104,7 @@ class HomeFragment : BaseFragment(), View.OnClickListener {
             R.id.fab_kannada -> {
                 val posX = view.findLocationOfCenterOnTheScreen().get(0)
                 val posY = view.findLocationOfCenterOnTheScreen().get(1)
-                fragmentCallback?.replaceFragment(EnglishInvitationFragment(posX, posY), TAG, AnimStyleEnum.SLIDE_UP.name)
+                fragmentCallback?.replaceFragment(KannadaInvitationFragment(posX, posY), TAG, AnimStyleEnum.SLIDE_UP.name)
             }
         }
     }

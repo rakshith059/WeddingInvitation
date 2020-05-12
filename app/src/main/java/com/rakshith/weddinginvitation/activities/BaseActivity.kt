@@ -4,17 +4,44 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+import com.google.firebase.remoteconfig.ktx.remoteConfig
+import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 import com.rakshith.weddinginvitation.R
 import com.rakshith.weddinginvitation.utils.AnimStyleEnum
 import com.rakshith.weddinginvitation.utils.IFragmentCallBack
+import com.rakshith.weddinginvitation.utils.REMOTE_CONFIG_YOUTUBE_LIVE_LINK
+import com.rakshith.weddinginvitation.utils.YOUTUBE_LINK
 
 abstract class BaseActivity : AppCompatActivity(), IFragmentCallBack {
     var mActivity: AppCompatActivity? = null
     var mFragment: Fragment? = null
+    var firebaseRemoteConfig: FirebaseRemoteConfig? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mActivity = this
+
+        firebaseRemoteConfig = Firebase.remoteConfig
+        val configSetting = remoteConfigSettings {
+            minimumFetchIntervalInSeconds = 60
+        }
+        firebaseRemoteConfig?.setConfigSettingsAsync(configSetting)
+
+
+        fetchRemoteConfigValues()
+    }
+
+    private fun fetchRemoteConfigValues() {
+        firebaseRemoteConfig
+            ?.fetchAndActivate()
+            ?.addOnCompleteListener(this) { task ->
+                if (task.isComplete) {
+                    YOUTUBE_LINK = firebaseRemoteConfig?.getString(REMOTE_CONFIG_YOUTUBE_LIVE_LINK)!!
+                }
+            }
     }
 
     /**

@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
 
 // Manifest version information!. Please don't add double digit numbers.
 def versionMajor = 0
-def versionMinor = 1
-def versionPatch = 0
+def versionMinor = 0
+def versionPatch = 2
 def versionBuild = 0 // bump for dogfood builds, public betas, etc.
 
 android {
@@ -35,13 +36,13 @@ android {
             keyPassword "meghith2020"
         }
         debug {
-            storeFile file('/Users/rakshithshankar/Documents/WeddingInvitation/keystore.jks')
+            storeFile file("$project.rootDir/keystore.jks")
             storePassword 'meghith'
             keyAlias = 'debug'
             keyPassword 'meghith2020'
         }
         release {
-            storeFile file('/Users/rakshithshankar/Documents/WeddingInvitation/keystore.jks')
+            storeFile file("$project.rootDir/keystore.jks")
             storePassword 'meghith'
             keyAlias = 'release'
             keyPassword 'meghith2020'
@@ -50,16 +51,18 @@ android {
 
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
         }
         debug {
+            signingConfig signingConfigs.allDebug
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.debug
         }
     }
+
+
 }
 
 dependencies {
@@ -80,4 +83,16 @@ dependencies {
     implementation "androidx.appcompat:appcompat:1.1.0"
     implementation "androidx.cardview:cardview:1.0.0"
     implementation "androidx.recyclerview:recyclerview:1.1.0"
+
+    //dependency for firebase analytics
+    implementation 'com.google.firebase:firebase-analytics:17.4.0'
+
+    //dependency for firebase remote config
+    implementation 'com.google.firebase:firebase-config-ktx:19.1.4'
+
+    // Calculates dp based on screen resolution
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    // Calculates sp based on screen resolution
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
 }

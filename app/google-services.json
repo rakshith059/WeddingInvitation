@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "882003713151",
+    "firebase_url": "https://wedding-invitation-d4484.firebaseio.com",
+    "project_id": "wedding-invitation-d4484",
+    "storage_bucket": "wedding-invitation-d4484.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882003713151:android:8408cdb5f3b63157dab34a",
+        "android_client_info": {
+          "package_name": "com.rakshith.weddinginvitation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882003713151-or6rib2h95nicdopmta86k0i310u0dej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgWODdzEctBMlms950stKNrg11NAF8lxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882003713151-or6rib2h95nicdopmta86k0i310u0dej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

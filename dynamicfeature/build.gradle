@@ -1,6 +1,27 @@
 apply plugin: 'com.android.dynamic-feature'
 
+// Manifest version information!. Please don't add double digit numbers.
+def versionMajor = 0
+def versionMinor = 0
+def versionPatch = 1
+def versionBuild = 0 // bump for dogfood builds, public betas, etc.
 android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        def appVersionName = "$versionMajor.$versionMinor.$versionPatch.$versionBuild"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        versionCode versionMajor * 100000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+        versionName appVersionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+
     signingConfigs {
         debug {
             storeFile file('/Users/rakshithshankar/Documents/WeddingInvitation/keystore.jks')
@@ -15,18 +36,16 @@ android {
             keyPassword 'meghith2020'
         }
     }
-    compileSdkVersion 29
-    
-
-    defaultConfig {
-        minSdkVersion 23
-        targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
-
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
     }
-
-
 }
 
 dependencies {
